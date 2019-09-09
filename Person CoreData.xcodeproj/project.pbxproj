@@ -12,16 +12,24 @@
 		492540072139C6280006E116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492540052139C6280006E116 /* Main.storyboard */; };
 		492540092139C6290006E116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492540082139C6290006E116 /* Assets.xcassets */; };
 		4925400C2139C6290006E116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4925400A2139C6290006E116 /* LaunchScreen.storyboard */; };
+		492540152139C6460006E116 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 492540132139C6460006E116 /* Person.xcdatamodeld */; };
+		492540192139C69D0006E116 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492540182139C69D0006E116 /* EntryController.swift */; };
+		4925401C2139C7620006E116 /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925401B2139C7620006E116 /* Entry+Convenience.swift */; };
+		4925401E2139C7720006E116 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925401D2139C7720006E116 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49253FFE2139C6280006E116 /* CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49253FFE2139C6280006E116 /* Person CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Person CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		492540012139C6280006E116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		492540032139C6280006E116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		492540062139C6280006E116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		492540082139C6290006E116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4925400B2139C6290006E116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4925400D2139C6290006E116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		492540142139C6460006E116 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
+		492540182139C69D0006E116 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		4925401B2139C7620006E116 /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
+		4925401D2139C7720006E116 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +46,7 @@
 		49253FF52139C6280006E116 = {
 			isa = PBXGroup;
 			children = (
-				492540002139C6280006E116 /* CoreData */,
+				492540002139C6280006E116 /* Person */,
 				49253FFF2139C6280006E116 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +54,58 @@
 		49253FFF2139C6280006E116 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49253FFE2139C6280006E116 /* CoreData.app */,
+				49253FFE2139C6280006E116 /* Person CoreData.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		492540002139C6280006E116 /* CoreData */ = {
+		492540002139C6280006E116 /* Person */ = {
 			isa = PBXGroup;
 			children = (
 				492540012139C6280006E116 /* AppDelegate.swift */,
-				492540032139C6280006E116 /* ViewController.swift */,
+				492540172139C65B0006E116 /* View Controllers */,
+				492540162139C64D0006E116 /* Model */,
+				4925401A2139C6AD0006E116 /* Model Controllers */,
 				492540052139C6280006E116 /* Main.storyboard */,
 				492540082139C6290006E116 /* Assets.xcassets */,
 				4925400A2139C6290006E116 /* LaunchScreen.storyboard */,
 				4925400D2139C6290006E116 /* Info.plist */,
 			);
-			path = CoreData;
+			path = Person;
+			sourceTree = "<group>";
+		};
+		492540162139C64D0006E116 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				492540132139C6460006E116 /* Person.xcdatamodeld */,
+				4925401B2139C7620006E116 /* Entry+Convenience.swift */,
+				4925401D2139C7720006E116 /* CoreDataStack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		492540172139C65B0006E116 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				492540032139C6280006E116 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4925401A2139C6AD0006E116 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				492540182139C69D0006E116 /* EntryController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49253FFD2139C6280006E116 /* CoreData */ = {
+		49253FFD2139C6280006E116 /* Person CoreData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492540102139C6290006E116 /* Build configuration list for PBXNativeTarget "CoreData" */;
+			buildConfigurationList = 492540102139C6290006E116 /* Build configuration list for PBXNativeTarget "Person CoreData" */;
 			buildPhases = (
 				49253FFA2139C6280006E116 /* Sources */,
 				49253FFB2139C6280006E116 /* Frameworks */,
@@ -79,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = CoreData;
+			name = "Person CoreData";
 			productName = CoreData;
-			productReference = 49253FFE2139C6280006E116 /* CoreData.app */;
+			productReference = 49253FFE2139C6280006E116 /* Person CoreData.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 49253FF92139C6280006E116 /* Build configuration list for PBXProject "CoreData" */;
+			buildConfigurationList = 49253FF92139C6280006E116 /* Build configuration list for PBXProject "Person CoreData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49253FFD2139C6280006E116 /* CoreData */,
+				49253FFD2139C6280006E116 /* Person CoreData */,
 			);
 		};
 /* End PBXProject section */
@@ -136,7 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				492540042139C6280006E116 /* ViewController.swift in Sources */,
+				492540152139C6460006E116 /* Person.xcdatamodeld in Sources */,
+				492540192139C69D0006E116 /* EntryController.swift in Sources */,
+				4925401E2139C7720006E116 /* CoreDataStack.swift in Sources */,
 				492540022139C6280006E116 /* AppDelegate.swift in Sources */,
+				4925401C2139C7620006E116 /* Entry+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoreData/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Person/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoreData/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Person/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +355,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49253FF92139C6280006E116 /* Build configuration list for PBXProject "CoreData" */ = {
+		49253FF92139C6280006E116 /* Build configuration list for PBXProject "Person CoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4925400E2139C6290006E116 /* Debug */,
@@ -324,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492540102139C6290006E116 /* Build configuration list for PBXNativeTarget "CoreData" */ = {
+		492540102139C6290006E116 /* Build configuration list for PBXNativeTarget "Person CoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492540112139C6290006E116 /* Debug */,
@@ -334,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		492540132139C6460006E116 /* Person.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				492540142139C6460006E116 /* Person.xcdatamodel */,
+			);
+			currentVersion = 492540142139C6460006E116 /* Person.xcdatamodel */;
+			path = Person.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49253FF62139C6280006E116 /* Project object */;
 }
